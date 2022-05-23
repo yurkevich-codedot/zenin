@@ -5,15 +5,33 @@
   &__title {
     &::after {
       content: "s";
-      font-size: 32px;
+      font-size: clamp(16px, 5vw, 28px);
     }
   }
 
   &__items {
     padding-top: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+
+    @include media-breakpoint-between(lg, xl) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+    }
   }
 
   &__item {
