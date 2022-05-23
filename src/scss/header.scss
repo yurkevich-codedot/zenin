@@ -1,0 +1,45 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  &__items {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    font-size: 26px;
+    padding: 0 10px;
+    text-decoration: none;
+    border-bottom: 5px solid transparent;
+    color: white;
+    transition: border-bottom 0.2s linear, color 0.2s linear;
+
+    &:hover {
+      color: white;
+      border-bottom: 5px solid rgb(16, 192, 16);
+    }
+
+    &--nft::after {
+      content: "s";
+      font-size: 20px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+  }
+
+  &__img {
+    width: 75px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+}

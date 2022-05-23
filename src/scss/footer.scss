@@ -1,0 +1,49 @@
+.footer {
+  padding-bottom: 40px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__link {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s linear;
+    &:hover {
+      border-bottom: 2px solid rgb(16, 192, 16);
+    }
+  }
+
+  &__discription {
+    color: white;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    &-name {
+      font-size: 25px;
+
+      &::after {
+        content: ",";
+      }
+
+      &::before {
+        font-size: 20px;
+        content: "© ";
+      }
+    }
+
+    &-year {
+      font-size: 20px;
+    }
+  }
+}

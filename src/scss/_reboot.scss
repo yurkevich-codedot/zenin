@@ -4,6 +4,10 @@ body {
 }
 
 body {
+  @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+  font-family: "Koulen", cursive;
   display: flex;
   flex-direction: column;
+  background-color: black;
+  color: rgb(16, 192, 16);
 }
